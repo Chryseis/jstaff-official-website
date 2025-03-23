@@ -17,4 +17,8 @@ export default defineConfig({
             },
         },
     },
+    build: {
+        assetsInclude: ['**/*.woff2', '**/*.woff', '**/*.ttf'],
+        assetsInlineLimit: 0,
+    },
 });
