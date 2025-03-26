@@ -20,7 +20,7 @@ const Materials = () => {
                             <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i className="fas fa-gem text-black text-2xl"></i>
                             </div>
-                            <h3 className="text-xl font-semibold mb-2">钛合金材料</h3>
+                            <h3 className="text-xl font-semibold mb-2">顶级材料</h3>
                             <p>轻盈却异常坚固，历久弥新，始终如一的可靠表现</p>
                         </div>
 

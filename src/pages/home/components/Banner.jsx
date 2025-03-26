@@ -1,4 +1,5 @@
 import banner from '@/assets/images/banner.jpg';
+import ContactUs from '@/components/ContactUs.jsx';
 
 const Banner = () => {
     return (
@@ -23,12 +24,14 @@ const Banner = () => {
                     </p>
                     <p className="text-xl text-gray-300 mb-8">精准与美学的革新之作</p>
                     <div className="flex flex-wrap gap-4">
-                        <a
-                            href="#learn"
-                            className="bg-amber-500 font-bold px-8 py-3 rounded-md hover:bg-amber-600 transition"
-                        >
-                            立即体验
-                        </a>
+                        <ContactUs>
+                            <a
+                                href="#learn"
+                                className="bg-amber-500 font-bold px-8 py-3 rounded-md hover:bg-amber-600 transition"
+                            >
+                                立即体验
+                            </a>
+                        </ContactUs>
                     </div>
                 </div>
             </div>
