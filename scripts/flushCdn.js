@@ -1,7 +1,9 @@
 import qiniu from 'qiniu';
-import yargs from 'yargs';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
 
-const argv = yargs
+// eslint-disable-next-line no-undef
+const argv = yargs(hideBin(process.argv))
     .option('accessKey', {
         alias: 'a',
         description: 'accessKey',
