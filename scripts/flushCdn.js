@@ -1,7 +1,9 @@
 import qiniu from 'qiniu';
-import yargs from 'yargs';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
 
-const argv = yargs
+// eslint-disable-next-line no-undef
+const argv = yargs(hideBin(process.argv))
     .option('accessKey', {
         alias: 'a',
         description: 'accessKey',
@@ -23,10 +25,7 @@ const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
 const cdnManager = new qiniu.cdn.CdnManager(mac);
 
 // 要刷新的文件路径，可以是单个文件，也可以是多个文件（数组）
-const urlsToRefresh = [
-    'http://your-cdn-domain/your-file.jpg', // 单个文件
-    'http://your-cdn-domain/your-file2.jpg', // 另一个文件
-];
+const urlsToRefresh = ['http://allen.chryseis.cn/'];
 
 // 执行刷新操作
 cdnManager.refreshUrls(urlsToRefresh, function (err, body, info) {

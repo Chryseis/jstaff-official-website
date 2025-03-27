@@ -1,9 +1,11 @@
 import qiniu from 'qiniu';
 import fs from 'fs';
 import path from 'path';
-import yargs from 'yargs';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
 
-const argv = yargs
+// eslint-disable-next-line no-undef
+const argv = yargs(hideBin(process.argv))
     .option('accessKey', {
         alias: 'a',
         description: 'accessKey',
@@ -27,7 +29,7 @@ const folderPath = 'dist'; // 需要上传的本地文件夹路径
 const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
 const options = {
     scope: bucket,
-    mimeLimit: 'image/*;text/javascript;text/css;text/html',
+    mimeLimit: 'image/*;text/html,text/css,application/javascript,application/json',
 };
 const putPolicy = new qiniu.rs.PutPolicy(options);
 const uploadToken = putPolicy.uploadToken(mac);
