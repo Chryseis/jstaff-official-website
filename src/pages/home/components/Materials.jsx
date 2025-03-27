@@ -1,4 +1,6 @@
 import banner2 from '@/assets/images/banner2.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog, faGem, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Materials = () => {
     return (
@@ -18,7 +20,10 @@ const Materials = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-black/50 backdrop-blur-sm p-6 rounded-lg">
                             <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i className="fas fa-gem text-black text-2xl"></i>
+                                <FontAwesomeIcon
+                                    icon={faGem}
+                                    className="text-black text-2xl"
+                                ></FontAwesomeIcon>
                             </div>
                             <h3 className="text-xl font-semibold mb-2">顶级材料</h3>
                             <p>轻盈却异常坚固，历久弥新，始终如一的可靠表现</p>
@@ -26,7 +31,10 @@ const Materials = () => {
 
                         <div className="bg-black/50 backdrop-blur-sm p-6 rounded-lg">
                             <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i className="fas fa-cog text-black text-2xl"></i>
+                                <FontAwesomeIcon
+                                    icon={faCog}
+                                    className="text-black text-2xl"
+                                ></FontAwesomeIcon>
                             </div>
                             <h3 className="text-xl font-semibold mb-2">铜铝材质</h3>
                             <p>精密打造的变调夹，确保每一次操作都如丝般顺</p>
@@ -34,7 +42,10 @@ const Materials = () => {
 
                         <div className="bg-black/50 backdrop-blur-sm p-6 rounded-lg">
                             <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i className="fas fa-shield-alt text-black text-2xl"></i>
+                                <FontAwesomeIcon
+                                    icon={faShieldAlt}
+                                    className="text-black text-2xl"
+                                ></FontAwesomeIcon>
                             </div>
                             <h3 className="text-xl font-semibold mb-2">滑轮硅胶</h3>
                             <p>特调配方，在提供完美张力的同时，悉心保护您的吉他</p>

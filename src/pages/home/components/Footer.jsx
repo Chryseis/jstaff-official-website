@@ -1,4 +1,6 @@
 import ContactUs from '@/components/ContactUs.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWeixin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
@@ -13,7 +15,7 @@ const Footer = () => {
                         <div className="flex space-x-4">
                             <ContactUs>
                                 <a className="text-gray-400 hover:text-amber-500 transition">
-                                    <i className="fab fa-brands fa-weixin"></i>
+                                    <FontAwesomeIcon icon={faWeixin}></FontAwesomeIcon>
                                 </a>
                             </ContactUs>
                         </div>

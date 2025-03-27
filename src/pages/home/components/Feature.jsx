@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faGuitar, faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons/faFeatherAlt';
+
 const Feature = () => {
     return (
         <section id="features" className="py-16 bg-gray-100">
@@ -8,7 +12,10 @@ const Feature = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="text-center">
                         <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i className="fas fa-music text-black text-2xl"></i>
+                            <FontAwesomeIcon
+                                icon={faMusic}
+                                className="text-black text-2xl"
+                            ></FontAwesomeIcon>
                         </div>
                         <h3 className="text-xl font-semibold mb-3">精准控音</h3>
                         <p className="text-gray-600">
@@ -18,7 +25,10 @@ const Feature = () => {
 
                     <div className="text-center">
                         <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i className="fas fa-feather-alt text-black text-2xl"></i>
+                            <FontAwesomeIcon
+                                icon={faFeatherAlt}
+                                className="text-black text-2xl"
+                            ></FontAwesomeIcon>
                         </div>
                         <h3 className="text-xl font-semibold mb-3">专业耐用</h3>
                         <p className="text-gray-600">
@@ -28,7 +38,10 @@ const Feature = () => {
 
                     <div className="text-center">
                         <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i className="fas fa-bolt text-black text-2xl"></i>
+                            <FontAwesomeIcon
+                                icon={faBolt}
+                                className="text-black text-2xl"
+                            ></FontAwesomeIcon>
                         </div>
                         <h3 className="text-xl font-semibold mb-3">卓越操控</h3>
                         <p className="text-gray-600">
@@ -38,7 +51,10 @@ const Feature = () => {
 
                     <div className="text-center">
                         <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i className="fas fa-guitar text-black text-2xl"></i>
+                            <FontAwesomeIcon
+                                icon={faGuitar}
+                                className="text-black text-2xl"
+                            ></FontAwesomeIcon>
                         </div>
                         <h3 className="text-xl font-semibold mb-3">个性表达</h3>
                         <p className="text-gray-600">可定制镶嵌面板，让工具成为个人风格的延伸</p>

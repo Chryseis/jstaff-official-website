@@ -1,4 +1,6 @@
 import ContactUs from '@/components/ContactUs.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWeixin } from '@fortawesome/free-brands-svg-icons';
 
 const Header = () => {
     return (
@@ -27,7 +29,10 @@ const Header = () => {
                     <div className="flex items-center space-x-6">
                         <ContactUs>
                             <button className="text-white hover:text-amber-400 relative">
-                                <i className="fas fa-brands fa-weixin text-xl"></i>
+                                <FontAwesomeIcon
+                                    className="text-xl"
+                                    icon={faWeixin}
+                                ></FontAwesomeIcon>
                             </button>
                         </ContactUs>
                     </div>
