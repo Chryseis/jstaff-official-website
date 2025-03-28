@@ -16,6 +16,12 @@ const argv = yargs(hideBin(process.argv))
         type: 'string',
         demandOption: true, // 强制要求提供此参数
     })
+    .option('urlsToRefresh', {
+        alias: 'u',
+        description: 'urlsToRefresh',
+        type: 'string',
+        demandOption: true, // 强制要求提供此参数
+    })
     .help().argv;
 
 // 配置
@@ -25,7 +31,7 @@ const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
 const cdnManager = new qiniu.cdn.CdnManager(mac);
 
 // 要刷新的文件路径，可以是单个文件，也可以是多个文件（数组）
-const urlsToRefresh = ['http://allen.chryseis.cn/'];
+const urlsToRefresh = argv.urlsToRefresh.split(',');
 
 // 执行刷新操作
 cdnManager.refreshUrls(urlsToRefresh, function (err, body, info) {

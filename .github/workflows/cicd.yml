@@ -25,4 +25,4 @@ jobs:
         yarn 
         yarn build
         yarn cd --accessKey ${{ secrets.ACCESSKEY }} --secretKey ${{ secrets.SECRETKEY }} --bucket ${{ vars.BUCKET }}
-        yarn flush --accessKey ${{ secrets.ACCESSKEY }} --secretKey ${{ secrets.SECRETKEY }}
+        yarn flush --accessKey ${{ secrets.ACCESSKEY }} --secretKey ${{ secrets.SECRETKEY }} --urlsToRefresh ${{ vars.URLS_TO_REFRESH}}
