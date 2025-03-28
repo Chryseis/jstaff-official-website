@@ -18,12 +18,18 @@ const argv = yargs(hideBin(process.argv))
         type: 'string',
         demandOption: true, // 强制要求提供此参数
     })
+    .option('bucket', {
+        alias: 'b',
+        description: 'bucket',
+        type: 'string',
+        demandOption: true, // 强制要求提供此参数
+    })
     .help().argv;
 
 // 配置七牛云密钥
 const accessKey = argv.accessKey;
 const secretKey = argv.secretKey;
-const bucket = 'jstaff-cd'; // 你的存储空间名称
+const bucket = argv.bucket; // 你的存储空间名称
 const folderPath = 'dist'; // 需要上传的本地文件夹路径
 
 const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
