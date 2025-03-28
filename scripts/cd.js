@@ -29,7 +29,7 @@ const folderPath = 'dist'; // 需要上传的本地文件夹路径
 const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
 const options = {
     scope: bucket,
-    mimeLimit: 'image/*,text/html,text/css,application/javascript,application/json',
+    mimeLimit: 'image/*;text/html;text/css;text/javascript;application/json',
 };
 const putPolicy = new qiniu.rs.PutPolicy(options);
 const uploadToken = putPolicy.uploadToken(mac);
